@@ -1,5 +1,4 @@
-apt-get dist-upgrade:
-  cmd.wait:
-    - watch:
-      - file: /etc/apt/sources.list
-      - file: /etc/apt/sources.list.d
+Upgrade all packages:
+  pkg.uptodate:
+    - refresh: True
+    - cache_valid_time: 4h
